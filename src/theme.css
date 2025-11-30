@@ -1,0 +1,8 @@
+/* 全局样式生效 */
+:root:root{
+    --adm-color-primary: rgb(105, 174, 120);
+}
+/* 局部样式生效 classname为puple下生效 */
+/* .puple{
+    --adm-color-primary: #a062d4;
+} */
