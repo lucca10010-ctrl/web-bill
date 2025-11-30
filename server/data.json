@@ -5,11 +5,13 @@
         "name": "data.json",
         "type": "json"
     },
-    "ka": {
-        "type": "pay",
-        "money": 100,
-        "date": "2019-05-01",
-        "useFor": "drinks",
-        "id": "12"
-    }
+    "ka": [
+        {
+            "type": "pay",
+            "money": 100,
+            "date": "2019-05-01",
+            "useFor": "drinks",
+            "id": "12"
+        }
+    ]
 }
