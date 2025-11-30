@@ -76,3 +76,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 4. `npm install antd-mobile`
 5. `npm install axios`
 6. `npm install classnames`
+
+### 别名路径配置 （使用@/ 表示 src/）
+1. 安装 craco
+    `npm install @craco/craco`
+2. 根目录创建 craco.config.js
+3. 修改 package.json
+    "scripts": {
+        "start": "craco start",
+        "build": "craco build",
+    }
