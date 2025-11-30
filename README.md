@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### 需要安装 redux状态管理, 路由， dayjs， 移动组件库， axios, calssnames
+1. `npm install @reduxjs/toolkit  react-redux`
+2. `npm install react-router-dom`
+3. `npm install dayjs`
+4. `npm install antd-mobile`
+5. `npm install axios`
+6. `npm install classnames`
