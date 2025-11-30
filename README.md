@@ -86,3 +86,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
         "start": "craco start",
         "build": "craco build",
     }
+
+### 配置 json-server 
+1. 安装 json-server
+    `npm install -D json-server`   
+2. 准备json文件
+3. 在 package.json添加启动命令：　
+   "server": "json-server ./server/data.json --port 8888"
