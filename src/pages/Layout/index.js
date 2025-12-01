@@ -1,32 +1,65 @@
-import { getBillList } from "@/store/modules/billStore";
-import { Button } from "antd-mobile";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Outlet } from "react-router-dom";
+import { Badge, TabBar } from 'antd-mobile';
+import {
+    AddCircleOutline,
+    BillOutline,
+    CalculatorOutline,
+    UserOutline
+} from 'antd-mobile-icons';
+import { useState } from 'react';
 
+import { Outlet, useNavigate } from 'react-router-dom';
+import './index.scss';
 function Layout() {
-    const billList = useSelector((state) => state.bill.billList);
-    const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getBillList());
-    }, [dispatch]);
+    const navigate = useNavigate();
 
-    useEffect(() => {
-        console.log("billList", billList);
-    }, [billList]);
+    // 切换菜单路由
+    const setRouteActive = (path) => {
+        navigate(path);
+    }
+
+    const tabs = [
+        {
+            key: 'month',
+            title: '月度账单',
+            icon: <BillOutline />,
+            badge: Badge.dot,
+        },
+        {
+            key: 'newBill',
+            title: '记账',
+            icon: <AddCircleOutline />,
+        },
+        {
+            key: 'year',
+            title: '年度账单',
+            icon: <CalculatorOutline />,
+            badge: Badge.dot,
+        },
+        {
+            key: 'personalCenter',
+            title: '我的',
+            icon: <UserOutline />,
+        },
+    ]
+
 
     return (
-        <div>
-            <h1>year</h1>
-            <Outlet />
+        <div className='layout'>
 
-            <Button color="primary">测试全局</Button>
-            <div className="puple">
-                <Button color="primary">局部全局</Button>
+            <div className="container">
+                <Outlet />
+            </div>
+
+            <div className="footer">
+                <TabBar onChange={value => setRouteActive(value)}>
+                    {tabs.map(item => (
+                        <TabBar.Item key={item.key} icon={item.icon} title={item.title} badge={item.badge} />
+                    ))}
+                </TabBar>
             </div>
         </div>
-    );
+    )
 }
 
 export default Layout;
