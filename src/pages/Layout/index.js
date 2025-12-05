@@ -37,7 +37,7 @@ function Layout() {
             badge: Badge.dot,
         },
         {
-            key: 'personalCenter',
+            key: 'me',
             title: '我的',
             icon: <UserOutline />,
         },

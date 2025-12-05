@@ -1,10 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
 import LayOut from "@/pages/Layout";
-import New from "@/pages/New";
+import Me from "@/pages/Me";
 import Month from "@/pages/Month";
+import New from "@/pages/New";
 import Year from "@/pages/Year";
+import { createHashRouter } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <LayOut />,
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: "/year",
                 element: <Year />,
+            },
+            {
+                path: "/me",
+                element: <Me />,
             },
         ],
     },
