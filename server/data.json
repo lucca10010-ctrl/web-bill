@@ -9,7 +9,28 @@
         {
             "type": "pay",
             "money": 100,
-            "date": "2019-05-01",
+            "date": "2019-05-01 18:20:30",
+            "useFor": "drinks",
+            "id": "12"
+        },
+        {
+            "type": "pay",
+            "money": 100,
+            "date": "2025-11-05 14:10:30",
+            "useFor": "drinks",
+            "id": "12"
+        },
+        {
+            "type": "pay",
+            "money": 120,
+            "date": "2025-12-05 10:10:30",
+            "useFor": "drinks",
+            "id": "12"
+        },
+        {
+            "type": "income",
+            "money": 1200,
+            "date": "2025-12-05 10:10:30",
             "useFor": "drinks",
             "id": "12"
         }
