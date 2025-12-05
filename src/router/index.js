@@ -11,7 +11,8 @@ const router = createHashRouter([
         element: <LayOut />,
         children: [
             {
-                path: "/month",
+                index: true,
+                // path: "/month",
                 element: <Month />,
             },
             {

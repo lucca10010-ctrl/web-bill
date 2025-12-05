@@ -1,17 +1,18 @@
 import { DatePicker, NavBar } from 'antd-mobile';
-import './index.scss'
 import {
-  UpOutline,
-  RightOutline,
   DownOutline,
+  UpOutline
 } from 'antd-mobile-icons';
 import { useState } from 'react';
+import './index.scss';
 function Month() {
 
   const [dateVisiable, setDateVisiable] = useState(false);
+  const [currentDate, setCurrentDate] = useState(new Date());
 
-  function dateOnConfirm() {
-    setDateVisiable(false)
+  function dateOnConfirm(date) {
+    setDateVisiable(false);
+    setCurrentDate(date);
   }
 
   return (
@@ -21,9 +22,9 @@ function Month() {
       </div>
       <div className="top">
         <div className="date" onClick={() => setDateVisiable(true)}>
-          <div className='year'>2023</div>
+          <div className='year'>{currentDate.getFullYear()}</div>
           <div className=''>|</div>
-          <div className='month'>3月账单</div>
+          <div className='month'>{currentDate.getMonth()} 月账单</div>
           <div className='icon'>{dateVisiable ? <DownOutline /> : <UpOutline />}</div>
         </div>
         <div className="detail">
@@ -41,6 +42,7 @@ function Month() {
           </div>
         </div>
         <DatePicker visible={dateVisiable}
+          precision='month'
           onConfirm={dateOnConfirm}
           onClose={() => setDateVisiable(false)} max={new Date()} />
       </div>

@@ -20,7 +20,8 @@ function Layout() {
 
     const tabs = [
         {
-            key: 'month',
+            // key: 'month',
+            key: '',
             title: '月度账单',
             icon: <BillOutline />,
             badge: Badge.dot,
