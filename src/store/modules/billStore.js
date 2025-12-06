@@ -22,7 +22,7 @@ export const { addBill, setBillList } = billStore.actions;
 // 编写异步
 const getBillList = () => {
     return async (dispatch) => {
-        const res = await axios.get("http://localhost:8888/ka");
+        const res = await axios.get("http://192.168.31.140:8888/ka");
         dispatch(setBillList(res.data));
     };
 };
