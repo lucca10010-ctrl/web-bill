@@ -1,0 +1,37 @@
+.daily-bill {
+  font-size: var(--fontSize);
+
+  .daily-item {
+    margin: 20px 0;
+    height: 100px;
+    border-radius: 6px;
+    background-color: white;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    >div {
+      line-height: 30px;
+    }
+
+    .daily-title {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .daily-detail {
+      display: flex;
+      justify-content: space-between;
+
+      .pay span {
+        color: red;
+      }
+
+      .total span {
+        font-weight: bold;
+      }
+    }
+  }
+}
