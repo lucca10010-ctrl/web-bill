@@ -1,9 +1,13 @@
 .month-bill {
     --fontSize: 16px;
     padding: 0 10px;
+
+    .weight {
+        font-weight: bold;
+    }
+
     .title {
         text-align: center;
-        font-weight: bold;
         font-size: 16px;
         margin: 10px;
     }
@@ -15,15 +19,20 @@
         padding: 0 30px;
         font-size: var(--fontSize);
 
+
         .date {
             display: flex;
             gap: 5px;
             align-items: center;
-            padding:  20px 0;
+            padding: 20px 0;
         }
-        .detail{
+
+        .detail {
             display: flex;
             gap: 3rem;
         }
+    }
+    .daily-bill{
+        font-size: var(--fontSize);
     }
 }
