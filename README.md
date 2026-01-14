@@ -76,6 +76,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 4. `npm install antd-mobile`
 5. `npm install axios`
 6. `npm install classnames`
+7. `npm i -D sass`
 
 ### 别名路径配置 （使用@/ 表示 src/）
 1. 安装 craco
