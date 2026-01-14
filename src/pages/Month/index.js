@@ -12,7 +12,8 @@ function Month() {
   // 麻烦在数据处理上， 实际应该让后端处理， 这里相当于是查出数据库所有数据，再处理
 
   const [dateVisiable, setDateVisiable] = useState(false);
-  const [currentDate, setCurrentDate] = useState(new Date());
+  // const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState(new Date('2025-11-01'));
   // 按月分组的数据
   const [currentMonthList, setCurrentMonthList] = useState([]);
 
@@ -73,6 +74,10 @@ function Month() {
   }
 
   function groupByXX(list, getKey) {
+    console.log('groupByXX list:', list);
+    if(!list){
+      return {};
+    }
     return list.reduce((acc, cur) => {
       const date = new Date(cur.date);
       const key = getKey(date);

@@ -1,6 +1,7 @@
 // 账单列表store
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { fetchBillList123 } from "@/api/index";
 
 const billStore = createSlice({
     name: "billList",
@@ -22,8 +23,10 @@ export const { addBill, setBillList } = billStore.actions;
 // 编写异步
 const getBillList = () => {
     return async (dispatch) => {
-        const res = await axios.get("http://192.168.31.140:8888/ka");
-        dispatch(setBillList(res.data));
+        // const res = await axios.get("http://192.168.31.140:8888/ka");
+        const res = await fetchBillList123();
+        // dispatch(setBillList(res.data));
+        dispatch(setBillList(res));
     };
 };
 
