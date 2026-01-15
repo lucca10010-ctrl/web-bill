@@ -1,7 +1,6 @@
 // 账单列表store
+import { fetchBillList123 } from "../../api/index";
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
-import { fetchBillList123 } from "@/api/index";
 
 const billStore = createSlice({
     name: "billList",
