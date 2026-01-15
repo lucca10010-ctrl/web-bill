@@ -24,7 +24,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "server": "json-server ./server/data.json --port 8888"
   },
